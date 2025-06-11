@@ -146,3 +146,53 @@ figure.logo{
       display: none;
     }
   }
+
+/*CONTEÚDO SITE*/
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+/*SERVIÇOS*/
+/*CLIENTES*/
+.cliente-container{
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+}
+
+.cliente-carrossel{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.item{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: var(--delay);
+}
+
+.item img{
+    width: 100%;
+}
+
+@keyframes autoRun {
+    from{
+        left: 100%;
+    }
+    to {
+        left: -50px;
+    }
+}
+
+.cliente-img{
+    width: 200px;
+    height: 100px;
+}
+/*CONTATO*/
