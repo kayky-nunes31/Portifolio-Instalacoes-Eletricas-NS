@@ -1,86 +1,286 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NS - Instalações Elétricas</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-     <!-- HEADER -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="imgs/logotipo/logoNS1.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
     <header>
-        <nav class="nav-bar">
-            <figure class="logo">
-                <img src="imgs/logotipo/LOGOTIPO PRINCIPAL.jpeg" alt="Logo NS" class="logo_img">
-            </figure>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#home" class="nav-link elemento">Serviços</a></li>
-                    <li class="nav-item"><a href="#clientes" class="nav-link elemento">Clientes</a></li>
-                    <li class="nav-item"><a href="#testimonials" class="nav-link elemento">Contato</a></li>
-                    <li class="nav-item"><img class="img1" src="imgs/icons8-nova-mensagem-24.png"></li>
-                    <li class="nav-item">
-                        <a href="https://api.whatsapp.com/">
-                            <img class="img2" src="imgs/icons8-whatsapp-24.png">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.instagram.com//">
-                            <img class="img3" src="imgs/icons8-instagram-24.png">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-<!---->
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="imgs/menu_white_36dp.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="#home" class="nav-link elemento">Serviços</a></li>
-                <li class="nav-item"><a href="#clientes" class="nav-link elemento">Clientes</a></li>
-                <li class="nav-item"><a href="#testimonials" class="nav-link elemento">Contato</a></li>
-                <li class="nav-item"><img class="img1" src="imgs/icons8-nova-mensagem-24.png"></li>
-                <li class="nav-item"><img class="img2" src="imgs/icons8-whatsapp-24.png"></li>
-                <li class="nav-item">
-                    <a href="https://www.instagram.com/">
-                        <img class="img3" src="imgs/icons8-instagram-24.png">
-                    </a>
-                </li>
-            </ul>
+      <nav class="nav-bar">
+        <figure class="logo">
+          <img
+            src="imgs/logotipo/LOGOTIPO PRINCIPAL.jpeg"
+            alt="Logo NS"
+            class="logo_img"
+          />
+        </figure>
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item">
+              <a href="#clientes" class="nav-link elemento">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#servico" class="nav-link elemento">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimonials" class="nav-link elemento">Contato</a>
+            </li>
+            <li class="nav-item">
+              <img class="img1" src="imgs/icons8-nova-mensagem-24.png" />
+            </li>
+            <li class="nav-item">
+              <a href="https://api.whatsapp.com/">
+                <img class="img2" src="imgs/icons8-whatsapp-24.png" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com//">
+                <img class="img3" src="imgs/icons8-instagram-24.png" />
+              </a>
+            </li>
+          </ul>
         </div>
+        <!---->
+        <div class="mobile-menu-icon">
+          <button onclick="menuShow()">
+            <img class="icon" src="imgs/menu_white_36dp.svg" alt="" />
+          </button>
+        </div>
+      </nav>
+      <div class="mobile-menu">
+        <ul>
+          <li class="nav-item">
+            <a href="#clientes" class="nav-link elemento">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#servico" class="nav-link elemento">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a href="#testimonials" class="nav-link elemento">Contato</a>
+          </li>
+          <li class="nav-item">
+            <img class="img1" src="imgs/icons8-nova-mensagem-24.png" />
+          </li>
+          <li class="nav-item">
+            <img class="img2" src="imgs/icons8-whatsapp-24.png" />
+          </li>
+          <li class="nav-item">
+            <a href="https://www.instagram.com/">
+              <img class="img3" src="imgs/icons8-instagram-24.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
+
     <!-- SLIDER / BANNER-->
-     <a target="_blank" href="#SEU_LINK_AQUI">
-        <!-- Banner Desktop -->
-        <img class="banner desktop-banner" src="imgs/Banner1-NS.jpg" alt="Banner Desktop">
-        <!-- Banner Mobile -->
-        <img class="banner mobile-banner" src="imgs/Banner1-NS.jpg" alt="Banner Mobile">
+    <a target="_blank" href="#SEU_LINK_AQUI">
+      <!-- Banner Desktop -->
+      <img
+        class="banner desktop-banner"
+        src="imgs/Banner3-NS.jpg"
+        alt="Banner Desktop"
+      />
+      <!-- Banner Mobile -->
+      <img
+        class="banner mobile-banner"
+        src="imgs/Banner3-NS.jpg"
+        alt="Banner Mobile"
+      />
     </a>
     <main>
-        <!--SERVIÇOS-->
-
-        <!--CLIENTES-->
-        <section id="#clientes">
-            <div class="cliente-text"><h1>NOSSAS PARCERIAS</h1></div>
-            <div class="cliente-container">
-                <div class="cliente-carrossel">
-                    <div class="item" style="--delay: 1s"><img src="./imgs/clientes/AFPESP.jpeg" alt=""></div>
-                    <div class="item" style="--delay: 3s"><img src="./imgs/clientes/AMIL.jpeg" alt=""></div>
-                    <div class="item" style="--delay: 5s"><img src="./imgs/clientes/davita.png" alt=""></div>
-                    <div class="item" style="--delay: 7s"><img class="cliente-img" src="./imgs/clientes/Roldao-Atacadista.jpg" alt=""></div>
-                    <div class="item" style="--delay: 9s"><img class="cliente-img" src="./imgs/clientes/UNIMED.jpeg" alt=""></div>
-                </div>
+      <!--CLIENTES-->
+      <section id="clientes">
+        <div class="cliente-text"><h1>NOSSAS PARCERIAS</h1></div>
+        <div class="cliente-container">
+          <div class="cliente-carrossel">
+            <div class="item" style="--delay: 1s">
+              <img src="./imgs/clientes/AFPESP.jpeg" alt="" />
             </div>
-        </section>
-        <!--CONTATO-->
+            <div class="item" style="--delay: 3s">
+              <img src="./imgs/clientes/AMIL.jpeg" alt="" />
+            </div>
+            <div class="item" style="--delay: 5s">
+              <img src="./imgs/clientes/davita.png" alt="" />
+            </div>
+            <div class="item" style="--delay: 7s">
+              <img
+                class="cliente-img"
+                src="./imgs/clientes/Roldao-Atacadista.jpg"
+                alt=""
+              />
+            </div>
+            <div class="item" style="--delay: 9s">
+              <img
+                class="cliente-img"
+                src="./imgs/clientes/UNIMED.jpeg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <!--SERVIÇOS-->
+    <section id="servico">
+      <div class="servico-text">
+        <h1>ALGUNS DE NOSSOS SERVIÇOS</h1>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <img
+            src="imgs/serviços/BOTOEIRA DE COMANDO.jpeg"
+            alt="Botoeira de Comando"
+          />
+          <h2 class="card-title">Botoeira de Comando</h2>
+          <p>
+            Dispositivo utilizado para controlar máquinas e equipamentos de
+            forma prática e segura.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="imgs/serviços/DISJUNTOR.jpeg" alt="Disjuntor" />
+          <h2 class="card-title">Disjuntor</h2>
+          <p>
+            Componente essencial para proteção de circuitos elétricos contra
+            sobrecarga e curto-circuito.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="imgs/serviços/INSTALACAO DE AR CONDICIONADO.jpeg"
+            alt="Instalação de Ar Condicionado"
+          />
+          <h2 class="card-title">Instalação de Ar Condicionado</h2>
+          <p>
+            Soluções eficientes e seguras para ambientes residenciais,
+            comerciais e industriais.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="imgs/serviços/QUADRO ELETRICO 2.jpeg"
+            alt="Quadro Elétrico"
+          />
+          <h2 class="card-title">Quadro Elétrico</h2>
+          <p>
+            Responsável pela distribuição e proteção dos circuitos elétricos em
+            diversas instalações.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="imgs/serviços/TERMOGRAFIA.jpeg" alt="Termografia" />
+          <h2 class="card-title">Termografia</h2>
+          <p>
+            Técnica preventiva que identifica pontos de aquecimento em sistemas
+            elétricos, evitando falhas.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-section">
+        <h2 class="carousel-title">
+          Mais serviços oferecidos pela <span>NS</span>
+        </h2>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 a 12 -->
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO1.jpeg" alt="Serviço 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO2.jpeg" alt="Serviço 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO3.jpeg" alt="Serviço 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO4.jpeg" alt="Serviço 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO5.jpeg" alt="Serviço 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO6.jpeg" alt="Serviço 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO7.jpeg" alt="Serviço 7" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO8.jpeg" alt="Serviço 8" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO9.jpeg" alt="Serviço 9" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO10.jpeg" alt="Serviço 10" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO11.jpeg" alt="Serviço 11" />
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/serviços/FOTO12.jpeg" alt="Serviço 12" />
+            </div>
+          </div>
+
+          <!-- Navegação -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <!--CONTATO-->
     <!-- LINKS JS -->
     <script src="js/app.js"></script>
     <script src="js/script.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--Script para Slider - Card de Serviços-->
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+  </body>
 </html>
