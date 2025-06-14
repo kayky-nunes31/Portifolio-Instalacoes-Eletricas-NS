@@ -273,6 +273,21 @@ body {
   background: #b00000;
 }
 
+.obras-carousel {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.obras-carousel h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.obras-carousel .destaque {
+  color: #b00000;
+  font-weight: bold;
+}
+
 /*CLIENTES*/
 .cliente-container {
   width: 100%;
