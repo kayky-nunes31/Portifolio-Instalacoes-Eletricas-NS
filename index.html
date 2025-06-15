@@ -34,7 +34,7 @@
               <a href="#testimonials" class="nav-link elemento">Contato</a>
             </li>
             <li class="nav-item">
-              <img class="img1" src="imgs/icons8-nova-mensagem-24.png" />
+              <a href="#sobre" class="nav-link elemento">Sobre Nós</a>
             </li>
             <li class="nav-item">
               <a href="https://api.whatsapp.com/">
@@ -64,10 +64,10 @@
             <a href="#servico" class="nav-link elemento">Serviços</a>
           </li>
           <li class="nav-item">
-            <a href="#testimonials" class="nav-link elemento">Contato</a>
+            <a href="#sobre" class="nav-link elemento">Sobre Nós</a>
           </li>
           <li class="nav-item">
-            <img class="img1" src="imgs/icons8-nova-mensagem-24.png" />
+            <a href="#testimonials" class="nav-link elemento">Contato</a>
           </li>
           <li class="nav-item">
             <img class="img2" src="imgs/icons8-whatsapp-24.png" />
@@ -97,34 +97,25 @@
       />
     </a>
     <main>
-      <!--CLIENTES-->
       <section id="clientes">
-        <div class="cliente-text"><h1>NOSSAS PARCERIAS</h1></div>
-        <div class="cliente-container">
-          <div class="cliente-carrossel">
-            <div class="item" style="--delay: 1s">
-              <img src="./imgs/clientes/AFPESP.jpeg" alt="" />
-            </div>
-            <div class="item" style="--delay: 3s">
-              <img src="./imgs/clientes/AMIL.jpeg" alt="" />
-            </div>
-            <div class="item" style="--delay: 5s">
-              <img src="./imgs/clientes/davita.png" alt="" />
-            </div>
-            <div class="item" style="--delay: 7s">
-              <img
-                class="cliente-img"
-                src="./imgs/clientes/Roldao-Atacadista.jpg"
-                alt=""
-              />
-            </div>
-            <div class="item" style="--delay: 9s">
-              <img
-                class="cliente-img"
-                src="./imgs/clientes/UNIMED.jpeg"
-                alt=""
-              />
-            </div>
+        <div class="cliente-text">
+          <h1>NOSSAS PARCERIAS</h1>
+        </div>
+
+        <div class="slider-container">
+          <div class="slider-track">
+            <img src="./imgs/clientes/AFPESP.jpeg" alt="AFPESP" />
+            <img src="./imgs/clientes/AMIL.jpeg" alt="AMIL" />
+            <img src="./imgs/clientes/davita.png" alt="Davita" />
+            <img src="./imgs/clientes/Roldao-Atacadista.jpg" alt="Roldão" />
+            <img src="./imgs/clientes/UNIMED.jpeg" alt="UNIMED" />
+
+            <!-- Duplicado para efeito de loop -->
+            <img src="./imgs/clientes/AFPESP.jpeg" alt="AFPESP" />
+            <img src="./imgs/clientes/AMIL.jpeg" alt="AMIL" />
+            <img src="./imgs/clientes/davita.png" alt="Davita" />
+            <img src="./imgs/clientes/Roldao-Atacadista.jpg" alt="Roldão" />
+            <img src="./imgs/clientes/UNIMED.jpeg" alt="UNIMED" />
           </div>
         </div>
       </section>
@@ -269,6 +260,32 @@
         <div class="swiper-pagination obras-pagination"></div>
       </div>
     </section>
+
+    <!--SOBRE NÓS-->
+    <section id="sobre-nos" class="sobre-nos">
+      <div class="sobre-container">
+        <div class="sobre-imagens">
+          <img src="imgs/serviços/SobreNos1.jpeg" alt="Equipe trabalhando" />
+          <img src="imgs/serviços/SobreNos2.jpeg" alt="Instalação elétrica" />
+        </div>
+        <div class="sobre-texto">
+          <h2>Sobre a NS</h2>
+          <p>
+            A <strong>NS Instalações Elétricas</strong> atua em todo o Brasil
+            oferecendo soluções completas em infraestrutura elétrica para obras
+            corporativas, industriais e comerciais. Com uma equipe especializada
+            e tecnologia de ponta, garantimos segurança, eficiência e qualidade
+            em cada projeto executado.
+          </p>
+          <p>
+            Nossa missão é transformar energia em desempenho para os nossos
+            clientes, com responsabilidade, inovação e compromisso com os
+            prazos.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!--CONTATO-->
     <!-- LINKS JS -->
     <script src="js/app.js"></script>
