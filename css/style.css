@@ -441,19 +441,18 @@ body {
     flex-direction: column;
   }
 
-@media (max-width: 768px) {
-  .sobre-imagens {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+  @media (max-width: 768px) {
+    .sobre-imagens {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-  .sobre-imagens img {
-    width: 48%;
-    height: 150px; /* Altura menor no mobile */
+    .sobre-imagens img {
+      width: 48%;
+      height: 150px; /* Altura menor no mobile */
+    }
   }
-}
-
 
   .sobre-texto h2 {
     font-size: 26px;
@@ -465,3 +464,59 @@ body {
 }
 
 /*CONTATO*/
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.form-left, .form-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  font-size: 14px;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  background-color: #0c3045;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b00000;
+}
+
+.form-right {
+  text-align: center;
+}
+
+.form-right h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.logo-ns {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
