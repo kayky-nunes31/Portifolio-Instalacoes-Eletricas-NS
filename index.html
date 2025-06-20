@@ -304,8 +304,8 @@
     <!--CONTATO-->
     <section id="contato" class="contato-container">
       <div class="form-left">
-        <form
-          action="https://formsubmit.co/kaykynunes357@gmail.com"
+        <!--<form
+          action="https://formsubmit.co/instalacoeseletricasns@gmail.com"
           method="POST"
         >
           <label for="nome">Nome</label>
@@ -336,6 +336,18 @@
           ></textarea>
 
           <button type="submit">ENVIAR MENSAGEM</button>
+          </form>-->
+          <form action="php/enviar.php" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required placeholder="Digite seu nome" />
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Digite seu email" />
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" required placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit">ENVIAR MENSAGEM</button>
         </form>
       </div>
 
@@ -383,7 +395,7 @@
                   name="mail-outline"
                   class="fa-solid fa-heart"
                 ></ion-icon>
-                nsinstaladora@gmail.com
+                instalacoeseletricasns@gmail.com
               </li>
             </ul>
           </div>
