@@ -176,7 +176,7 @@ body {
     font-size: 1.5rem;
   }
 }
-
+/*Cards*/
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -271,6 +271,11 @@ body {
 
 .swiper-pagination-bullet-active {
   background: #b00000;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  z-index: 10;
+  cursor: pointer;
 }
 
 .obras-carousel {
@@ -607,3 +612,4 @@ footer{
         padding-right: 100px;
     }
 }
+

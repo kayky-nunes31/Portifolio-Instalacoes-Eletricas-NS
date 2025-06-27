@@ -6,10 +6,13 @@
     <title>NS - Instalações Elétricas</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="imgs/logotipo/logoNS1.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("WUdMf6AxRz3D9wgGM"); // <-- substitua pela sua
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -189,7 +192,7 @@
           Mais serviços oferecidos pela <span>NS</span>
         </h2>
 
-        <div class="swiper">
+        <div class="swiper serv-swiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 a 15 -->
             <div class="swiper-slide">
@@ -239,10 +242,12 @@
             </div>
           </div>
 
-          <!-- Navegação -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <!-- Setas -->
+          <div class="swiper-button-prev serv-prev"></div>
+          <div class="swiper-button-next serv-next"></div>
+
+          <!-- Paginação -->
+          <div class="swiper-pagination serv-pagination"></div>
         </div>
       </div>
     </section>
@@ -262,7 +267,7 @@
             <img src="imgs/serviços/FOTO-OBRA2.jpeg" alt="Obra 3" />
           </div>
           <div class="swiper-slide">
-            <img src="imgs/serviços/FOTO-DAVITA.jpeg" alt="Obra 3" />
+            <img src="imgs/serviços/FOTO-DAVITA.jpeg" alt="Obra 4" />
           </div>
           <!-- Adicione mais imagens se quiser -->
         </div>
@@ -304,48 +309,15 @@
     <!--CONTATO-->
     <section id="contato" class="contato-container">
       <div class="form-left">
-        <!--<form
-          action="https://formsubmit.co/instalacoeseletricasns@gmail.com"
-          method="POST"
-        >
-          <label for="nome">Nome</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            required
-            placeholder="Digite seu nome"
-          />
-
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Digite seu email"
-          />
-
-          <label for="mensagem">Mensagem</label>
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="5"
-            required
-            placeholder="Digite sua mensagem"
-          ></textarea>
-
-          <button type="submit">ENVIAR MENSAGEM</button>
-          </form>-->
-          <form action="php/enviar.php" method="POST">
+          <form id="form-contato">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required placeholder="Digite seu nome" />
+            <input type="text" name="name" id="nome" required placeholder="Digite seu nome" />
 
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required placeholder="Digite seu email" />
 
             <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="mensagem" required placeholder="Digite sua mensagem"></textarea>
+            <textarea name="message" id="mensagem" required placeholder="Digite sua mensagem"></textarea>
 
             <button type="submit">ENVIAR MENSAGEM</button>
         </form>
@@ -356,6 +328,23 @@
         <img src="imgs/logotipo/logoNS1.png" alt="Logo NS" class="logo-ns" />
       </div>
     </section>
+    
+    <script>
+    const form = document.getElementById('form-contato');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_45auxfo", "template_dwr1nme", this)
+        .then(() => {
+          alert("Mensagem enviada com sucesso!");
+          form.reset();
+        }, (err) => {
+          alert("Erro ao enviar. Tente novamente.");
+          console.log(err);
+        });
+    });
+  </script>
 
     <!--FOOTER-->
     <!-- FOOTER -->
@@ -386,7 +375,7 @@
                 <ion-icon name="location" class="fa-solid fa-heart"></ion-icon>
                 Rua Antônio Massana, 13 - Vila Alabama - SP
               </li>
-              <li>
+              <li style="text-decoration: none;">
                 <ion-icon name="call" class="fa-solid fa-heart"></ion-icon>
                 +55 (11) 94737-7118
               </li>
@@ -404,42 +393,41 @@
       <p class="copyright">Copyright &copy; 2025</p>
     </footer>
     <!-- LINKS JS -->
-    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jQuery (necessário para seu script.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!--Script para Slider - Card de Serviços-->
+    <!-- Seu script personalizado -->
+    <script src="js/script.js"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <script>
-      const swiper = new Swiper(".swiper", {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
-      });
-    </script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const servSwiper = new Swiper(".serv-swiper", {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".serv-next",
+        prevEl: ".serv-prev",
+      },
+      pagination: {
+        el: ".serv-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 10 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 30 },
+      },
+    });
+  });
+</script>
   </body>
 </html>

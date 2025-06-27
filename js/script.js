@@ -1,41 +1,42 @@
+// MENU MOBILE
 function menuShow() {
-  let menuMobile = document.querySelector(".mobile-menu");
-  if (menuMobile.classList.contains("open")) {
-    menuMobile.classList.remove("open");
-    document.querySelector(".icon").src = "assets/img/menu_white_36dp.svg";
-  } else {
-    menuMobile.classList.add("open");
-    document.querySelector(".icon").src = "assets/img/close_white_36dp.svg";
-  }
+  const menuMobile = document.querySelector(".mobile-menu");
+  const icon = document.querySelector(".icon");
+
+  menuMobile.classList.toggle("open");
+  icon.src = menuMobile.classList.contains("open")
+    ? "assets/img/close_white_36dp.svg"
+    : "assets/img/menu_white_36dp.svg";
 }
 
-/* Seções */
-
+// QUANDO O DOM ESTIVER PRONTO
 $(document).ready(function () {
+  // BOTÃO DE MENU MOBILE (caso tenha outro botão com id #mobile_btn)
   $("#mobile_btn").on("click", function () {
     $("#mobile_menu").toggleClass("active");
-    $("#mobile_btn").find("i").toggleClass("fa-x");
+    $(this).find("i").toggleClass("fa-x");
   });
 
+  // SCROLL ATIVO NAS SEÇÕES
   const sections = $("section");
   const navItems = $(".nav-item");
 
   $(window).on("scroll", function () {
     const header = $("header");
     const scrollPosition = $(window).scrollTop() - header.outerHeight();
-
     let activeSectionIndex = 0;
 
+    // Sombra no header
     if (scrollPosition <= 0) {
       header.css("box-shadow", "none");
     } else {
-      header.css("box-shadow", "5px 1px 5px rgba(0, 0, 0, 0.1");
+      header.css("box-shadow", "5px 1px 5px rgba(0, 0, 0, 0.1)");
     }
 
+    // Ativar link da seção visível
     sections.each(function (i) {
-      const section = $(this);
-      const sectionTop = section.offset().top - 96;
-      const sectionBottom = sectionTop + section.outerHeight();
+      const sectionTop = $(this).offset().top - 96;
+      const sectionBottom = sectionTop + $(this).outerHeight();
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
         activeSectionIndex = i;
@@ -47,6 +48,7 @@ $(document).ready(function () {
     $(navItems[activeSectionIndex]).addClass("active");
   });
 
+  // ANIMAÇÕES COM SCROLLREVEAL
   ScrollReveal().reveal("#cta", {
     origin: "left",
     duration: 2000,
@@ -70,52 +72,63 @@ $(document).ready(function () {
     duration: 1000,
     distance: "20%",
   });
-});
 
-/*Slider de Serviços
+  // SWIPER: Carrossel de serviços
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 3, spaceBetween: 30 },
+    },
+  });
+  // SWIPER: Carrossel de serviços
+  const servSwiper = new Swiper(".serv-swiper", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".serv-next",
+      prevEl: ".serv-prev",
+    },
+    pagination: {
+      el: ".serv-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      768: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 3, spaceBetween: 30 },
+    },
+  });
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
+  // SWIPER: Carrossel de obras
+  const obrasSwiper = new Swiper(".obras-swiper", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".obras-next",
+      prevEl: ".obras-prev",
     },
-    1024: {
-      slidesPerView: 3,
+    pagination: {
+      el: ".obras-pagination",
+      clickable: true,
     },
-  },
-});*/
-/*Slider de Obras*/
-const obrasSwiper = new Swiper(".obras-swiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: ".obras-next",
-    prevEl: ".obras-prev",
-  },
-  pagination: {
-    el: ".obras-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
     },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
+  });
 });
